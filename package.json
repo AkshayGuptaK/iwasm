@@ -7,7 +7,8 @@
     "test": "node tests",
     "asbuild:untouched": "asc assembly/index.ts --target debug",
     "asbuild:optimized": "asc assembly/index.ts --target release",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/AkshayGuptaK/iwasm#readme",
   "dependencies": {
-    "@assemblyscript/loader": "^0.19.16"
+    "@assemblyscript/loader": "^0.19.16",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "assemblyscript": "^0.19.16"
