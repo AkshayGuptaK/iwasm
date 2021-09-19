@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <script src="/js/loader.js" ></script>
+        <script>
+            const WL = new WasmLoader();
+            WL.wasm('/build/optimized.wasm')
+            .then(instanceExports => {
+                const { minusOne } = instanceExports;
+                document.write(minusOne(30));
+            })
+        </script>
+    </body>
+</html>
