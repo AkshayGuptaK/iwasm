@@ -6,8 +6,8 @@
             const WL = new WasmLoader();
             WL.wasm('/wasm/optimized.wasm')
             .then(instanceExports => {
-                const { minusOne } = instanceExports;
-                document.write(minusOne(30));
+                const { fizzBuzz, __getString } = instanceExports;
+                document.write(__getString(fizzBuzz(30)));
             })
         </script>
     </body>
